@@ -8,4 +8,20 @@
  */
 int _printf(const char *format, ...)
 {
+	int print_f = 0;
+	va_list p;
+	
+	prt_f func[] = {
+		{"c", f_char},
+		{"s", f_string},
+		{"%", f_percent},
+		{NULL, NULL}
+		};
+	if (format != NULL)
+	{
+		va_start(p, format);
+		print_f = loop_str(format, func, p);
+		va_end(p);
+	}
+	return (print_f);
 }
