@@ -23,5 +23,7 @@ int _printf(const char *format, ...)
 		print_f = loop_str(format, func, p);
 		va_end(p);
 	}
+	else
+		return (-1);
 	return (print_f);
 }
