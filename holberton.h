@@ -12,6 +12,14 @@ int f_string(va_list p);
 int f_percent(va_list p);
 int f_backslash(va_list p);
 
+/**
+ * struct ptr - Structure
+ * @ptr: pointer
+ * @f: function pointer
+ *
+ * Description: Declaration of structure prt.
+ */
+
 typedef struct prt
 {
 	char *prt;
