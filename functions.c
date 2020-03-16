@@ -62,7 +62,7 @@ int f_percent(va_list p)
 
 /**
  * f_backslash - Function that prints a backslash using function _write
- * @p: Variable argument list
+ * @p: Variable argument list.
  * Return: On success 1.
  * On error, -1 is returned.
  */
