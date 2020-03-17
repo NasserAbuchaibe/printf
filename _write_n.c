@@ -9,6 +9,8 @@ int _write_n(int n)
 {
 	int x = 0, count = 0, y = 0;
 
+	if (n == INT_MIN)
+		n+= 1;
 	if (n < 0)
 	{
 		_write('-');
