@@ -19,13 +19,14 @@ int loop_str(const char *format, prt_f func[], va_list p)
 			{
 				_write('%');
 				_write('r');
+				val_ret += 2;
 			}
 			for (y = 0; func[y].prt != NULL; y++)
 			{
 				if (format[x + 1] == func[y].prt[0])
 				{
 					aux = func[y].f(p);
-					if (val_ret == -1)
+					if (aux == -1)
 						return (-1);
 					val_ret = val_ret + aux;
 					break;
