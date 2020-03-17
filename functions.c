@@ -33,13 +33,11 @@ int f_string(va_list p)
 {
 	char *s;
 	int x;
-	char str[] = "(null)";
 
 	s = va_arg(p, char *);
 	if (s == NULL)
 	{
-		for (x = 0 ; str[x] != '\0' ; x++)
-			_write(str[x]);
+		_write("(null)");
 	}
 	for (x = 0 ; s[x] != '\0' ; x++)
 	{
