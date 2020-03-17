@@ -33,7 +33,7 @@ int loop_str(const char *format, prt_f func[], va_list p)
 				}
 			}
 			if (format[x + 1] != '\0')
-				x = x + 2;
+				x = x + 1;
 		}
 	}
 	return (count);
