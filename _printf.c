@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _printf - produces output according to a format
- * @format: first variable function argument
- * Return: Printed character numbers or
+ * _printf - printf formatted data.
+ * @format: variable function argument
+ * Return: printed character numbers or
  * a negative value if an error occurs
  */
 int _printf(const char *format, ...)
