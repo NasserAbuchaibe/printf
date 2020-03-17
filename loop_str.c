@@ -13,9 +13,14 @@ int loop_str(const char *format, prt_f func[], va_list p)
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		if (format[x] != '%' && format[x] != '\\')
-			return (_write(format[x]));
-		else if (format[x] == '%' || format[x] == '\\')
+		while (format[x] != '%' && format[x] != '\0')
+		{
+			_write(format[x]);
+			x++;
+			count++;
+		}
+
+		if (format[x] == '%' || format[x] == '\\')
 		{
 			for (y = 0; func[y].prt != NULL; y++)
 			{
@@ -31,6 +36,11 @@ int loop_str(const char *format, prt_f func[], va_list p)
 			if (format[x + 2] != '\0')
 				x = x + 2;
 		}
+		if (format[x] != '\0' && format[x] != '%')
+                {
+                        _write(format[x]);
+                        count++;
+                }
 	}
 	return (count);
 }
