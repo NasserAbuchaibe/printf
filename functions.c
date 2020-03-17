@@ -13,20 +13,19 @@ int _write(char c)
 
 /**
  * f_char - Function that prints a char using function _write
- * @p: Variable argument list
+ * @p: Variable list argument
  * Return: On success 1.
  * On error, -1 is returned.
  */
-
 int f_char(va_list p)
 {
-	char ch = va_arg(p, int);
-
-	return (_write(ch));
+	_write(va_arg(p, int));
+	return (1);
 }
+
 /**
  * f_string - Function that prints a string using function _write
- * @p: Variable argument list.
+ * @p: Variable list argument
  * Return: On success 1.
  * On error, -1 is returned.
  */
@@ -40,50 +39,21 @@ int f_string(va_list p)
 	{
 		return (-1);
 	}
-	for (x = 0 ; s != '\0' ; x++)
+	for (x = 0 ; s[x] != '\0' ; x++)
 	{
-		return (_write(s[x]));
+		_write(s[x]);
 	}
+	return (x);
 }
 
 /**
  * f_percent - Function that prints a symbol of percent using function _write
- * @p: Variable argument list
+ * @p: Variable list argument
  * Return: On success 1.
  * On error, -1 is returned.
  */
-int f_percent(va_list p)
+int f_percent(__attribute__((unused))va_list p)
 {
-	int x;
-
-	if (format[x + 1] == '%')
-		return (_write("%"));
-}
-
-/**
- * f_backslash - Function that prints a backslash using function _write
- * @p: Variable argument list.
- * Return: On success 1.
- * On error, -1 is returned.
- */
-int f_backslash(va_list p)
-{
-	int x;
-
-	if (format[x + 1] == 'b')
-		return (_write('\b'));
-	else if (format[x + 1] == 'f')
-		return (_write('\f'));
-	else if (format[x + 1] == 'n')
-		return (_write('\n'));
-	else if (format[x + 1] == 't')
-		return (_write('\t'));
-	else if (format[x + 1] == 'v')
-	{
-		return (_write('\v'));
-	}
-	else
-	{
-		return (_write(format[x + 1]));
-	}
+	_write('%');
+	return (1);
 }
