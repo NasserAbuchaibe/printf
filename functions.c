@@ -37,7 +37,7 @@ int f_string(va_list p)
 	s = va_arg(p, char *);
 	if (s == NULL)
 	{
-		s = "(NULL)";
+		s = "(null)";
 	}
 	for (x = 0 ; s[x] != '\0' ; x++)
 	{
