@@ -9,7 +9,7 @@
  */
 int loop_str(const char *format, prt_f func[], va_list p)
 {
-	int x = 0, y = 0, val_ret = 0, aux;
+	int x = 0, y = 0, val_ret = 0, auxcont;
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
@@ -24,10 +24,10 @@ int loop_str(const char *format, prt_f func[], va_list p)
 			{
 				if (format[x + 1] == func[y].prt[0])
 				{
-					aux = func[y].f(p);
-					if (aux == -1)
+					auxcont = func[y].f(p);
+					if (auxcont == -1)
 						return (-1);
-					val_ret += aux;
+					val_ret += auxcont;
 					break;
 				}
 			}
