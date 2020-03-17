@@ -59,7 +59,7 @@ int f_decimal(va_list p)
 	int x = 0, val_ret = 0;
 
 	x = va_arg(p, int);
-	val_ret = val_ret + _write(x);
+	val_ret = val_ret + _write_n(x);
 	return (val_ret);
 }
 
@@ -74,6 +74,6 @@ int f_integ(va_list p)
 {
 	int x = 0;
 
-	x = x + _write(va_arg(p, int));
+	x = x + _write_n(va_arg(p, int));
 	return (x);
 }
