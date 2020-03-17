@@ -9,14 +9,14 @@
  */
 int loop_str(const char *format, prt_f func[], va_list p)
 {
-	int x = 0, y = 0, val_ret, count = 0;
+	int x = 0, y = 0, val_ret = 0;
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
 		if (format[x] != '%')
 		{
 			_write(format[x]);
-			count++;
+			val_ret++;
 		}
 		if (format[x] == '%')
 		{
@@ -24,10 +24,9 @@ int loop_str(const char *format, prt_f func[], va_list p)
 			{
 				if (format[x + 1] == func[y].prt[0])
 				{
-					val_ret = func[y].f(p);
+					val_ret += func[y].f(p);
 					if (val_ret == -1)
 						return (-1);
-					count += val_ret;
 					break;
 				}
 			}
@@ -35,5 +34,5 @@ int loop_str(const char *format, prt_f func[], va_list p)
 				x = x + 1;
 		}
 	}
-	return (count);
+	return (val_ret);
 }
