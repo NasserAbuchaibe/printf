@@ -15,6 +15,11 @@ int loop_str(const char *format, prt_f func[], va_list p)
 	{
 		if (format[x] == '%')
 		{
+			if (format[x + 1] == 'r')
+			{
+				_write('%');
+				_write('r');
+			}
 			for (y = 0; func[y].prt != NULL; y++)
 			{
 				if (format[x + 1] == func[y].prt[0])
