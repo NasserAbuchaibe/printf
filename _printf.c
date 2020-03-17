@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 		{"c", f_char},
 		{"s", f_string},
 		{"%", f_percent},
+		{"d", f_decimal},
+		{"i", f_integ},
 		{NULL, NULL}
 	};
 	int print_f = 0;
