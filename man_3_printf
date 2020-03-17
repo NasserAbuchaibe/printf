@@ -1,0 +1,31 @@
+.TH _PRINTF 1 "17 March 2020" "1.0" "Man page for function _printf"
+.SH NAME
+_printf - printf formatted data.
+.br
+.SH SYNOPSIS
+int _printf(const char *format, ...);
+.br
+.SH DESCRIPTION
+The function writes output to stdout and returns the number of characters that are printed or if there is an error, it returns -1.
+.B
+ Conversion specifiers
+.br
+A conversion specifier begins with a percent sign (%) and it ends with one of the following characters:
+.RS 0
+c:  Print a single character.
+.RS 0
+d:  Print a signed decimal integer.
+.RS 0
+i:  Print a signed decimal integer.
+.RS 0
+s:  Print a string.
+.RS 0
+%:  No argument is converted. The complete conversion specification is "%%" for print a percent sign character.
+.br  
+.SH RETURN VALUE
+The function returns the number of characters printed without the null byte. If there is an error, returns -1.
+.SH BUGS
+No known bugs.
+.br
+.SH AUTHOR
+Nasser Abuchaibe, Kimberly Hinostroza.
