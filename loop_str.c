@@ -13,10 +13,9 @@ int loop_str(const char *format, prt_f func[], va_list p)
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		while (format[x] != '%' && format[x] != '\0')
+		if (format[x] != '%' && format[x] != '\0')
 		{
 			_write(format[x]);
-			x++;
 			count++;
 		}
 
