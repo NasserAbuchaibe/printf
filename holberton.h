@@ -25,5 +25,7 @@ int f_char(va_list p);
 int f_string(va_list p);
 int f_percent(va_list p);
 int f_backslash(va_list p);
+int f_decimal(va_list p);
+int f_integ(va_list p);
 
 #endif
