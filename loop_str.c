@@ -36,11 +36,6 @@ int loop_str(const char *format, prt_f func[], va_list p)
 			if (format[x + 2] != '\0')
 				x = x + 2;
 		}
-		if (format[x] != '\0' && format[x] != '%')
-                {
-                        _write(format[x]);
-                        count++;
-                }
 	}
 	return (count);
 }
