@@ -57,3 +57,33 @@ int f_percent(__attribute__((unused))va_list p)
 	_write('%');
 	return (1);
 }
+
+/**
+ * f_decimal - Function that prints a decimal number
+ * @p: Variable list argument
+ * Return: Number decimal
+ * On error, -1 is returned.
+ */
+int f_decimal(va_list p)
+{
+	int x = 0, val_ret = 0;
+
+	x = va_arg(p, int);
+	val_ret = val_ret + _write(x);
+	return (val_ret);
+}
+
+/**
+ * f_integ - Function that prints a integer number
+ * @p: Variable list argument
+ * Return: integer number
+ * On error, -1 is returned.
+ */
+
+int f_integ(va_list p)
+{
+	int x = 0;
+
+	x = x + _write(va_arg(p, int));
+	return (x);
+}
