@@ -17,8 +17,8 @@ int loop_str(const char *format, prt_f func[], va_list p)
 		{
 			if (format[x + 1] == 'r')
 			{
-				_write('%');
-				_write('r');
+				_write(format[x]);
+				_write(format[x + 1]);
 				val_ret += 2;
 			}
 			for (y = 0; func[y].prt != NULL; y++)
