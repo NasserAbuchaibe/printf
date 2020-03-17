@@ -34,10 +34,10 @@ int f_string(va_list p)
 	char *s;
 	int x;
 
-	s = va_arg(p, char*);
+	s = va_arg(p, char *);
 	if (s == NULL)
 	{
-		return (-1);
+		s = "(NULL)";
 	}
 	for (x = 0 ; s[x] != '\0' ; x++)
 	{
