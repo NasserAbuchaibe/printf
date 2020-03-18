@@ -1,1 +1,40 @@
-Repository for project 0x11. C - printf
+_printf
+
+_printf is our version of the printf function from the stdio.h library, 
+a project developed for Holberton School for educational purposes.
+
+**Description:
+
+Prints a formatted string on the screen.
+
+**Task 0.
+
+Write a function that produces output according to a format.
+
+. c
+. s
+. %
+
+In this task _printf prints on screen:
+
+1. A character
+2. A character string
+3. The character '%' and if the following character is different from null or 
+   space also print.
+
+**Task 1.
+
+ function that produces output according to a format.
+
+. d
+. i
+
+In this task _printf prints on screen:
+
+1. Decimal numbers
+2. Integer numbers
+
+**In the file man_3_printf you will find the instructions for using _printf
+
+**Developed by Kimberly Hinostroza and Nasser Abuchaibe for Holberton School
+
