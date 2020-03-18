@@ -1,14 +1,14 @@
-#Repository for _printf function
+# Repository for _printf function
 
 _printf is our version of the printf function from the stdio.h library, a project developed for Holberton School for educational purposes.
 
 
-##Description:
+## Description:
 
 The function writes output to stdout and returns the number of characters that are printed or if there is an error, it returns a negative value (-1).
 
 
-###Task 0.
+### Task 0.
 
 Write a function that produces output according to a format.
 . c
@@ -21,7 +21,7 @@ In this task _printf prints on screen:
 3. The character '%' and if the following character is different from null or 
    space also print.
 
-###Task 1.
+### Task 1.
 
 function that produces output according to a format.
 . d
