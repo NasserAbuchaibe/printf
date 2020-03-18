@@ -8,6 +8,11 @@ _printf is our version of the printf function from the stdio.h library, a projec
 The function writes output to stdout and returns the number of characters that are printed or if there is an error, it returns a negative value (-1).
 
 
+### Conversion specificiers
+
+In this function, the conversion specifier character determines if the respective argument should be interpreted as a character, a string, or an integer.
+
+
 ### Task 0.
 
 Write a function that produces output according to a format.
