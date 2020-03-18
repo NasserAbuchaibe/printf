@@ -23,7 +23,7 @@ int _write_n(int n)
 	}
 	if (x / 10 != 0)
 	{
-		y = (_write_n(x / 10));
+		y = ('0' + _write_n(x / 10));
 	}
 	_write(x % 10 + '0');
 	count++;
