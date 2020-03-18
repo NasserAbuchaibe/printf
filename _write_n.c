@@ -7,7 +7,7 @@
  */
 int _write_n(int n)
 {
-	int x, count = 0, y = 0;
+	int x, count = 0;
 
 	if (n == INT_MIN)
 		n += 1;
@@ -23,10 +23,9 @@ int _write_n(int n)
 	}
 	if (x / 10 != 0)
 	{
-		y = ('0' + _write_n(x / 10));
+		(_write_n(x / 10));
 	}
 	_write(x % 10 + '0');
 	count++;
-	count += y;
 	return (count);
 }
