@@ -20,15 +20,12 @@ int _printf(const char *format, ...)
 
 	va_list p;
 
-	if (format != NULL)
-	{
-		va_start(p, format);
-		print_f = loop_str(format, func, p);
-		va_end(p);
-	}
-	else
+	if (format == NULL)
 	{
 		return (-1);
 	}
+	va_start(p, format);
+	print_f = loop_str(format, func, p);
+	va_end(p);
 	return (print_f);
 }
