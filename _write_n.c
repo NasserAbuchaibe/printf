@@ -7,14 +7,14 @@
  */
 int _write_n(int n)
 {
-	int x = 0, count = 0, y = 0;
+	int x, count = 0, y = 0;
 
 	if (n == INT_MIN)
 		n += 1;
 	if (n < 0)
 	{
-		_write('-');
 		x = -1 * n;
+		_write('-');
 		count++;
 	}
 	else
