@@ -21,7 +21,7 @@ int _write_n(int n)
 	{
 		x = n;
 	}
-	if (x / 10)
+	if (x / 10 != 0)
 	{
 		y = (_write_n(x / 10));
 	}
