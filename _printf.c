@@ -4,7 +4,7 @@
  * _printf - printf formatted data.
  * @format: variable function argument
  * Return: printed character numbers or
- * a negative value if an error occurs
+ * -1 if an error occurs
  */
 int _printf(const char *format, ...)
 {
