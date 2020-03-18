@@ -28,5 +28,5 @@ int _write_n(int n)
 	_write(x % 10 + '0');
 	count++;
 	count += y;
-	return (count);
+	return (1);
 }
